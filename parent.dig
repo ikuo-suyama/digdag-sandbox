@@ -1,0 +1,6 @@
+schedule:
+  cron>: '* * * * *'
+
++run:
+  +exec_child:
+    call>: child.dig
