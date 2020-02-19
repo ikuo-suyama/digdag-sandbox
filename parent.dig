@@ -1,6 +1,20 @@
 schedule:
   cron>: '* * * * *'
 
+sla:
+  fail: true
+  alert: true
+  duration: 00:00:05
+  +fail:
+    +notify:
+      sh>: echo "タイムアウトだよ！"
+    +kill_self:
+      sh>: digdag kill ${attempt_id}
+
 +run:
   +exec_child:
     call>: child.dig
+
+_error:
+  +notify:
+    sh>: echo "エラーが出たよ！"

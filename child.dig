@@ -1,10 +1,2 @@
-sla:
-  fail: true
-  duration: 00:00:05
-
 +exec:
-  sh>: timeout -sKILL 15 ./sleep.sh 30
-
-_error:
-  +notify:
-    sh>: echo "エラーが出たよ！"
+  sh>: timeout -sKILL 60 ./sleep.sh 10

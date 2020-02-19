@@ -1,4 +1,4 @@
 ```sh
 $ digdag server -m --task-log logs
-$ digdag push
+$ digdag push default
 ```
