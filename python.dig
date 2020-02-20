@@ -1,0 +1,6 @@
+schedule:
+  cron>: '* * * * *'
+
++run:
+  +exec_py:
+    py>: tasks.python.child.HelloWorld.say
