@@ -1,17 +1,12 @@
 schedule:
   cron>: '* * * * *'
 
-sla:
-  fail: true
-  alert: true
-  duration: 00:00:30
-  +fail:
-    +notify:
-      sh>: echo "タイムアウトだよ！ http://localhost:65432/attempts/1275970"
-    +retry_self:
-      sh>: digdag retry ${attempt_id} --keep-revision --all
-    +kill_self:
-      sh>: digdag kill ${attempt_id}
+_export:
+  notification:
+    server_uri: http://127.0.0.1:65432/
+  session_name: parent
+
+!include : retry.dig
 
 +run:
   _retry:

@@ -1,0 +1,12 @@
+sla:
+  alert: true
+  duration: 00:01:00
+  +fail:
+    +notify:
+      _export:
+        url: "${notification.server_uri}/attempts/${attempt_id}"
+        message: "[ERROR] ${session_name} was timeout.\n Check: ${url}"
+      # call>: tasks/digdag/notify_slack.dig
+      echo>: ${message}
+    +kill_self:
+      sh>: digdag kill ${attempt_id}
