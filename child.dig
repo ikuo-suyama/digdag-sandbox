@@ -1,2 +1,0 @@
-+exec:
-  sh>: timeout -sKILL 60 ./sleep.sh 120
