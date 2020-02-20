@@ -4,14 +4,19 @@ schedule:
 sla:
   fail: true
   alert: true
-  duration: 00:00:05
+  duration: 00:00:30
   +fail:
     +notify:
-      sh>: echo "タイムアウトだよ！"
+      sh>: echo "タイムアウトだよ！ http://localhost:65432/attempts/1275970"
+    +retry_self:
+      sh>: digdag retry ${attempt_id} --keep-revision --all
     +kill_self:
       sh>: digdag kill ${attempt_id}
 
 +run:
+  _retry:
+    limit: 3
+    interval: 10
   +exec_child:
     call>: child.dig
 
