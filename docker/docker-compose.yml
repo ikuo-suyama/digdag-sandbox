@@ -4,14 +4,16 @@ services:
   digdag-a:
     build: ./digdag-server
     ports:
-      - 6543:6543
+      - 65432:65432
     container_name: digdag-a
   digdag-b:
     build: ./digdag-server
     ports:
-      - 6544:6543
+      - 65431:65432
     container_name: digdag-b
   db:
     image: postgres
+    ports:
+      - 5432:5432
     environment:
       POSTGRES_PASSWORD: rootpass
