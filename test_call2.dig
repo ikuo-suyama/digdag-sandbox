@@ -1,5 +1,5 @@
-schedule:
-  cron>: '* * * * *'
+# schedule:
+#   cron>: '* * * * *'
 
 +run:
  _parallel: true
