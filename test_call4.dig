@@ -1,0 +1,73 @@
+schedule:
+  cron>: '* * * * *'
+
++run:
+ _parallel: true
+ +exec_child1:
+    call>: tasks/dig/wait.dig
+ +exec_child2:
+    call>: tasks/dig/wait.dig
+ +exec_child3:
+    call>: tasks/dig/wait.dig
+ +exec_child4:
+    call>: tasks/dig/wait.dig
+ +exec_child5:
+    call>: tasks/dig/wait.dig
+ +exec_child6:
+    call>: tasks/dig/wait.dig
+ +exec_child7:
+    call>: tasks/dig/wait.dig
+ +exec_child8:
+    call>: tasks/dig/wait.dig
+ +exec_child9:
+    call>: tasks/dig/wait.dig
+ +exec_child10:
+    call>: tasks/dig/wait.dig
++run2:
+ _parallel: true
+ +exec_child1:
+    call>: tasks/dig/wait.dig
+ +exec_child2:
+    call>: tasks/dig/wait.dig
+ +exec_child3:
+    call>: tasks/dig/wait.dig
+ +exec_child4:
+    call>: tasks/dig/wait.dig
+ +exec_child5:
+    call>: tasks/dig/wait.dig
+ +exec_child6:
+    call>: tasks/dig/wait.dig
+ +exec_child7:
+    call>: tasks/dig/wait.dig
+ +exec_child8:
+    call>: tasks/dig/wait.dig
+ +exec_child9:
+    call>: tasks/dig/wait.dig
+ +exec_child10:
+    call>: tasks/dig/wait.dig
++run3:
+ _parallel: true
+ +exec_child1:
+    call>: tasks/dig/wait.dig
+ +exec_child2:
+    call>: tasks/dig/wait.dig
+ +exec_child3:
+    call>: tasks/dig/wait.dig
+ +exec_child4:
+    call>: tasks/dig/wait.dig
+ +exec_child5:
+    call>: tasks/dig/wait.dig
+ +exec_child6:
+    call>: tasks/dig/wait.dig
+ +exec_child7:
+    call>: tasks/dig/wait.dig
+ +exec_child8:
+    call>: tasks/dig/wait.dig
+ +exec_child9:
+    call>: tasks/dig/wait.dig
+ +exec_child10:
+    call>: tasks/dig/wait.dig
+
+_error:
+  +notify:
+    sh>: echo "エラーが出たよ！"
