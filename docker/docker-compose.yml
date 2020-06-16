@@ -6,11 +6,11 @@ services:
     ports:
       - 65432:65432
     container_name: digdag-a
-  digdag-b:
-    build: ./digdag-server
-    ports:
-      - 65431:65432
-    container_name: digdag-b
+  # digdag-b:
+  #   build: ./digdag-server
+  #   ports:
+  #     - 65431:65432
+  #   container_name: digdag-b
   db:
     image: postgres
     ports:

@@ -1,6 +1,9 @@
 schedule:
   cron>: '* * * * *'
-
+  
+_export:
+  exec_datetime: ${moment(session_time).minutes( moment(session_time).minutes() / 10 * 10 ).utc().format("YYYY-MM-DD HH:mm:00")}
+  
 +run:
  _parallel: true
  +exec_child1:
