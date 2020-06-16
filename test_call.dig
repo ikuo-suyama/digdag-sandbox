@@ -26,6 +26,46 @@ _export:
     call>: tasks/dig/wait.dig
  +exec_child10:
     call>: tasks/dig/wait.dig
+ +exec_child11:
+    call>: tasks/dig/wait.dig
+ +exec_child12:
+    call>: tasks/dig/wait.dig
+ +exec_child13:
+    call>: tasks/dig/wait.dig
+ +exec_child14:
+    call>: tasks/dig/wait.dig
+ +exec_child15:
+    call>: tasks/dig/wait.dig
+ +exec_child16:
+    call>: tasks/dig/wait.dig
+ +exec_child17:
+    call>: tasks/dig/wait.dig
+ +exec_child18:
+    call>: tasks/dig/wait.dig
+ +exec_child19:
+    call>: tasks/dig/wait.dig
+ +exec_child20:
+    call>: tasks/dig/wait.dig
+ +exec_child21:
+    call>: tasks/dig/wait.dig
+ +exec_child22:
+    call>: tasks/dig/wait.dig
+ +exec_child23:
+    call>: tasks/dig/wait.dig
+ +exec_child24:
+    call>: tasks/dig/wait.dig
+ +exec_child25:
+    call>: tasks/dig/wait.dig
+ +exec_child26:
+    call>: tasks/dig/wait.dig
+ +exec_child27:
+    call>: tasks/dig/wait.dig
+ +exec_child28:
+    call>: tasks/dig/wait.dig
+ +exec_child29:
+    call>: tasks/dig/wait.dig
+ +exec_child30:
+    call>: tasks/dig/wait.dig
 
 _error:
   +notify:
